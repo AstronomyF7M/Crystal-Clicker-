@@ -252,6 +252,6 @@ body::before {
  
 
  #shop-items button:disabled {
-  background-color: #999;
+  background-color: #800080;
   cursor: not-allowed;
  }
