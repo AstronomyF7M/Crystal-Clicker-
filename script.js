@@ -36,7 +36,7 @@ function buyItem(item) {
         updateShop();
         saveGameState();
     } else {
-        alert('Not enough crystals!');
+        alert('Not Enough Crystals 😡!');
     }
 }
 
