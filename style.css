@@ -165,3 +165,93 @@ body::before {
     background-color: #1e56a0;
     transform: scale(1.05);
 }
+ /* [PREVIEW_SIZE:800x600] */
+ body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+ }
+ 
+
+ #app {
+  display: flex;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 80%;
+  max-width: 900px;
+ }
+ 
+
+ #game {
+  padding: 20px;
+  text-align: center;
+  flex: 2;
+ }
+ 
+
+ #crystal-container {
+  margin-bottom: 20px;
+ }
+ 
+
+ #crystal {
+  cursor: pointer;
+  transition: transform 0.1s ease;
+ }
+ 
+
+ #crystal:active {
+  transform: scale(0.95);
+ }
+ 
+
+ #shop {
+  padding: 20px;
+  background-color: #eee;
+  flex: 1;
+ }
+ 
+
+ #shop h2 {
+  margin-top: 0;
+ }
+ 
+
+ #shop-items {
+  list-style: none;
+  padding: 0;
+ }
+ 
+
+ #shop-items li {
+  margin-bottom: 10px;
+ }
+ 
+
+ #shop-items button {
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+ }
+ 
+
+ #shop-items button:hover {
+  background-color: #4cae4c;
+ }
+ 
+
+ #shop-items button:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+ }
