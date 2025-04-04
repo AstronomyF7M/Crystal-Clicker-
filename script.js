@@ -15,7 +15,9 @@ const shopItemsElement = document.getElementById('shop-items');
 const shopItems = [
     { name: 'Shiny Pickaxe', cost: 10, effect: () => crystalMultiplier++ },
     { name: 'Crystal Harvester', cost: 50, effect: () => autoCrystals++ },
-    { name: 'Laser Drill', cost: 100, effect: () => crystalMultiplier += 5 },
+    { name: 'Hammer', cost: 100, effect: () => crystalMultiplier += 5 },
+    { name: 'Laser Drill', cost: 150, effect: () => crystalMultiplier += 10 },
+    { name: 'Drill Rig', cost: 200, effect: () => crystalMultiplier += 20 },
 ];
 
 crystalElement.addEventListener('click', () => {
