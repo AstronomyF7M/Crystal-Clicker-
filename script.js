@@ -7,12 +7,15 @@ import config from './config.js';
 let crystals = parseInt(localStorage.getItem('crystals')) || 0;
 let crystalMultiplier = parseInt(localStorage.getItem('crystalMultiplier')) || 1;
 let autoCrystals = parseInt(localStorage.getItem('autoCrystals')) || 0;
+let ch_price = 50
+
+function
 
 const crystalCountElement = document.getElementById('crystal-count');
 const crystalElement = document.getElementById('crystal');
 const shopItemsElement = document.getElementById('shop-items');
 
-const shopItems = [
+const shopItems = 
     { name: 'Shiny Pickaxe', cost: 10, effect: () => crystalMultiplier++ },
     { name: 'Crystal Harvester', cost: 50, effect: () => autoCrystals++ },
     { name: 'Hammer', cost: 100, effect: () => crystalMultiplier += 5 },
