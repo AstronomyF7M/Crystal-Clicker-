@@ -1,17 +1,30 @@
 /* Include ByteSize Font */
 @import url('https://fonts.googleapis.com/css2?family=ByteSize:wght@400;700&display=swap');
 
+/* CSS Variables for Colors */
+:root {
+    --primary-color: #ff6347;
+    --secondary-color: #ff4500;
+    --background-color: #f0f0f0;
+    --text-color: #333;
+    --light-gray: #ddd;
+    --white: #fff;
+    --footer-text-color: #aaa;
+    --gradient: linear-gradient(135deg, #ff6347, #ff4500);
+}
+
 /* General Styles */
 body {
     font-family: 'ByteSize', sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: var(--background-color);
+    color: var(--text-color);
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background: var(--gradient);
 }
 
 /* Crystal Count Display */
@@ -19,7 +32,8 @@ body {
     font-size: 2em;
     margin-bottom: 20px;
     text-align: center;
-    color: #ff6347;
+    color: var(--primary-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* Crystal Clicker */
@@ -29,43 +43,59 @@ body {
     background: url('path/to/crystal-image.png') no-repeat center center;
     background-size: contain;
     cursor: pointer;
-    transition: transform 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #crystal:hover {
     transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+#crystal:active {
+    transform: scale(0.95);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 /* Shop Items */
 #shop-items {
     list-style-type: none;
     padding: 0;
+    width: 300px;
 }
 
 #shop-items li {
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: var(--white);
+    border: 1px solid var(--light-gray);
     margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 15px;
+    border-radius: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#shop-items li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 #shop-items li button {
     font-family: 'ByteSize', sans-serif;
-    background-color: #ff6347;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--white);
     border: none;
-    padding: 5px 10px;
+    padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s, transform 0.2s;
 }
 
 #shop-items li button:hover {
-    background-color: #ff4500;
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
 }
 
 /* Footer */
@@ -73,5 +103,16 @@ footer {
     position: absolute;
     bottom: 10px;
     font-size: 0.8em;
-    color: #aaa;
+    color: var(--footer-text-color);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Additional Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+body {
+    animation: fadeIn 1s ease-in-out;
 }
