@@ -1,7 +1,7 @@
+// Existing imports and variables
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-
 import config from './config.js';
 
 let crystals = parseInt(localStorage.getItem('crystals')) || 0;
@@ -14,6 +14,7 @@ const crystalCountElement = document.getElementById('crystal-count');
 const crystalElement = document.getElementById('crystal');
 const shopItemsElement = document.getElementById('shop-items');
 
+// Updated shop items
 const shopItems = [
     {
         name: `Pickaxe Upgrade (Level ${pickaxeLevel})`,
@@ -35,6 +36,83 @@ const shopItems = [
         },
         condition: () => !crystalHarvesterUnlocked
     },
+    {
+        name: 'Mining Helmet',
+        cost: 100,
+        effect: () => {
+            crystalMultiplier += 2;
+        }
+    },
+    {
+        name: 'Mining Boots',
+        cost: 200,
+        effect: () => {
+            crystalMultiplier += 3;
+        }
+    },
+    {
+        name: 'Mining Gloves',
+        cost: 300,
+        effect: () => {
+            crystalMultiplier += 4;
+        }
+    },
+    {
+        name: 'Advanced Crystal Harvester',
+        cost: 500,
+        effect: () => {
+            autoCrystals += 5;
+        }
+    },
+    {
+        name: 'Mining Drill',
+        cost: 1000,
+        effect: () => {
+            crystalMultiplier += 10;
+        }
+    },
+    {
+        name: 'Mining Robot',
+        cost: 2000,
+        effect: () => {
+            autoCrystals += 20;
+        }
+    },
+    {
+        name: 'Mining Backpack',
+        cost: 150,
+        effect: () => {
+            crystalMultiplier += 1;
+        }
+    },
+    {
+        name: 'Mining Lamp',
+        cost: 120,
+        effect: () => {
+            crystalMultiplier += 1;
+        }
+    },
+    {
+        name: 'Mining Cart',
+        cost: 800,
+        effect: () => {
+            autoCrystals += 10;
+        }
+    },
+    {
+        name: 'Mining Suit',
+        cost: 400,
+        effect: () => {
+            crystalMultiplier += 5;
+        }
+    },
+    {
+        name: 'Enhanced Mining Drill',
+        cost: 3000,
+        effect: () => {
+            crystalMultiplier += 15;
+        }
+    }
 ];
 
 crystalElement.addEventListener('click', () => {
@@ -150,3 +228,7 @@ function rollForCrystals() {
         alert('Not enough crystals to roll!');
     }
 }
+
+// Make the shop scrollable
+document.getElementById('shop-items').style.maxHeight = '400px';
+document.getElementById('shop-items').style.overflowY = 'scroll';
