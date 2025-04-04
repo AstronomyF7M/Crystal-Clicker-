@@ -46,7 +46,7 @@ function createShopItemElement(item) {
     const li = document.createElement('li');
     li.textContent = `${item.name} - Cost: ${item.cost}`;
 
-    const button = document.createElement('button');
+    const <button>file:///media/fuse/drivefs-1094f8a6f5c3555bedfef165a0b8b35c/root/New%20Piskel%20(7).png = document.createElement('button');
     button.textContent = 'Buy';
     button.addEventListener('click', () => buyItem(item));
 
