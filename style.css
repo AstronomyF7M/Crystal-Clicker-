@@ -1,5 +1,5 @@
 body {
-  
+    font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -100,28 +100,35 @@ h2 {
     transform: scale(1.05);
 }
 
-/* Animated stars background */
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 200%;
-    height: 200%;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"><rect width="1" height="1" fill="#444"/></svg>') repeat;
-    animation: stars 10s linear infinite;
-    z-index: -1;
-    opacity: 0.7;
+/* Crystal Roll UI */
+#crystal-roll-container {
+    margin-top: 30px;
+    text-align: center;
 }
 
-@keyframes stars {
-    from {
-        transform: translate(-50%, -50%);
-    }
+#crystal-roll-button {
+    background-color: #673ab7; /* Deep Purple */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
 
-    to {
-        transform: translate(0%, 0%);
-    }
+#crystal-roll-button:hover {
+    background-color: #512da8;
+    transform: translateY(-2px);
+}
+
+#crystal-roll-result {
+    font-size: 1.5em;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #ffeb3b; /* Amber */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 #upgrade-items {
@@ -165,93 +172,27 @@ body::before {
     background-color: #1e56a0;
     transform: scale(1.05);
 }
- /* [PREVIEW_SIZE:800x600] */
- body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
- }
- 
 
- #app {
-  display: flex;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  width: 80%;
-  max-width: 900px;
- }
- 
+/* Animated stars background */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"><rect width="1" height="1" fill="#444"/></svg>') repeat;
+    animation: stars 10s linear infinite;
+    z-index: -1;
+    opacity: 0.7;
+}
 
- #game {
-  padding: 20px;
-  text-align: center;
-  flex: 2;
- }
- 
+@keyframes stars {
+    from {
+        transform: translate(-50%, -50%);
+    }
 
- #crystal-container {
-  margin-bottom: 20px;
- }
- 
-
- #crystal {
-  cursor: pointer;
-  transition: transform 0.1s ease;
- }
- 
-
- #crystal:active {
-  transform: scale(0.95);
- }
- 
-
- #shop {
-  padding: 20px;
-  background-color: #eee;
-  flex: 1;
- }
- 
-
- #shop h2 {
-  margin-top: 0;
- }
- 
-
- #shop-items {
-  list-style: none;
-  padding: 0;
- }
- 
-
- #shop-items li {
-  margin-bottom: 10px;
- }
- 
-
- #shop-items button {
-  background-color: #5cb85c;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  width: 100%;
-  box-sizing: border-box;
- }
- 
-
- #shop-items button:hover {
-  background-color: #4cae4c;
- }
- 
-
- #shop-items button:disabled {
-  background-color: #800080;
-  cursor: not-allowed;
- }
+    to {
+        transform: translate(0%, 0%);
+    }
+}
