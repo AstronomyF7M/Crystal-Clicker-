@@ -1,8 +1,12 @@
 ## Crystal Clicker
 
-V0.1
+v1.1
 
-THIS IS NOT THE FINAL VERSION.
-UPDATES WILL BE MADE IN THE FUTURE. 
+Welcome to The Mineshaft!
 
-PLEASE SEND FEEDBACK & IDEAS!
+New UI
+New Colors
+Added Music
+Secret Button Hidden Somewhere...
+
+
